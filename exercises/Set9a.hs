@@ -247,4 +247,4 @@ multiply :: Permutation -> Permutation -> Permutation
 multiply p q = map (\i -> p !! (q !! i)) (identity (length p))
 
 permute :: Permutation -> [a] -> [a]
-permute p xs = map snd $ sortBy (comparing fst) (zip p xs)
+permute p = map snd . sortBy (comparing fst) . zip p
