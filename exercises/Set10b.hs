@@ -21,8 +21,8 @@ import Mooc.VeryLimitedPrelude
 --   False ||| undefined ==> an error!
 
 (|||) :: Bool -> Bool -> Bool
-_ ||| True = True
-x ||| _ = x
+x ||| False = x
+_ ||| _ = True
 
 ------------------------------------------------------------------------------
 -- Ex 2: Define the function boolLength, that returns the length of a
